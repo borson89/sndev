@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sn_devops_step_execution</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="sn_devops_step_execution">stateCHANGESTOfailed^change_requestISNOTEMPTY^EQ<item display_value="Failed" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="failed"/>
+            <item endquery="false" field="change_request" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Update Change When App Run Fails</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var changeRequestId = current.change_request;
+	var executionEndTime = current.end_time;
+	var changeManager = new DevOpsChangeManager();
+	var executionId = current.task_execution;
+	
+	var grChangeRequest = new GlideRecord("change_request");
+	grChangeRequest.addQuery("sys_id", changeRequestId);
+	grChangeRequest.query();
+
+	if (grChangeRequest.next()) {
+
+		//callback GR
+		var callbackGr = (new DevOpsCallbackDAO()).getRecordByParams({'step_execution': current.getUniqueValue()});
+		if (!(callbackGr.hasNext() && callbackGr.next())) {
+			DevOpsLogger.log("BR: Update Change When App Run is Complete(): callback record not found for Step Execution");
+			return;
+		}
+		
+		var stepExecutionLink = gs.getProperty('glide.servlet.uri') + current.getLink();
+		
+		var changeRequestDetails = (new DevOpsChangeManager()).getChangeRequestDetailsFromCallback(callbackGr);       
+        if (gs.nil(changeRequestDetails) || gs.nil(changeRequestDetails["setCloseCode"])) {
+            DevOpsLogger.log("BR: Update Change When App Run is Complete(): Either `changeRequestDetails` field is missing or `setCloseCode` field is missing inside `changeRequestDetails` field. Updating the Change Record as usual");
+        } else {
+			if (!changeRequestDetails["setCloseCode"]) {
+				grChangeRequest.comments = stepExecutionLink;
+				grChangeRequest.update();
+				DevOpsLogger.log("BR: Update Change When App Run is Complete(): Not setting Change Request to closed state as setCloseCode is false");
+				return;
+			}
+		}
+		
+		if (!executionId)
+			gs.warn("DevOps task_execution is not associated to step_execution yet");
+		else
+			grChangeRequest.close_code = current.task_execution.result == 'successful' ?  'successful': 'unsuccessful';
+		
+		grChangeRequest.work_end = executionEndTime;
+		grChangeRequest.close_notes = stepExecutionLink;
+		grChangeRequest.approval = changeManager.getChangeRequestApprovedApproval();
+		grChangeRequest.update();
+		
+		if (gs.nil(global.ChangeRequestStateHandler)){
+			gs.info('BR: Update Change When App Run is Complete(): global.ChangeRequestStateHandler not found. Not transitioning to close state.');
+			return;
+		}
+		
+		try {
+			// change the state to closed
+			var state = grChangeRequest.getValue('state');
+			var stateHandler = new global.ChangeRequestStateHandler(grChangeRequest);
+			var updateSuccessful;
+			while (!changeManager.isChangeRequestInPostImplementState(state) && stateHandler.next()){ 
+				updateSuccessful = grChangeRequest.update();
+				if(!updateSuccessful)
+					break;
+
+				state = grChangeRequest.getValue('state');
+			}
+		} catch (error){
+			DevOpsLogger.log("BR: Update Change When App Run is Complete(): ERROR >>>"+ error);
+		}
+			
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-03-09 13:31:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1520c0471b4ac1105c044119bc4bcb74</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update Change When App Run Fails</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DevOps Data Model" source="sn_devops">34cfa6f087302300f97abba826cb0b54</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name>sys_script_1520c0471b4ac1105c044119bc4bcb74</sys_update_name>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-03-09 13:31:04</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=1520c0471b4ac1105c044119bc4bcb74"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</claim_owner_scope>
+        <claim_timestamp>1845e2a3d630000001</claim_timestamp>
+        <metadata_update_name>sys_script_1520c0471b4ac1105c044119bc4bcb74</metadata_update_name>
+        <previous_claim_app_version>1.32.0</previous_claim_app_version>
+        <previous_claim_name>DevOps Data Model</previous_claim_name>
+        <previous_claim_scope>34cfa6f087302300f97abba826cb0b54</previous_claim_scope>
+        <sys_created_by>robert.bryan@crossfuze.com</sys_created_by>
+        <sys_created_on>2022-11-09 20:52:17</sys_created_on>
+        <sys_id>d9a217711bc7d1104a75fcc4cc4bcbb7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>robert.bryan@crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-11-09 20:52:17</sys_updated_on>
+    </sys_claim>
+</record_update>

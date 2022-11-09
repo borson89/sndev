@@ -1,0 +1,2195 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>1665c943c7b300108c2c02b827c26018</copied_from>
+        <copied_from_name>DevOps Apply Change Approval Def</copied_from_name>
+        <description/>
+        <internal_name>devops_apply_change_approval_definition__tfr</internal_name>
+        <label_cache>[{"name":"ec4689f1-bbda-4b49-8ec8-c7980a4fa5a2.approval_state","label":"8➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.change_approval_definition.approval_action","label":"Input➛Change Approval Definition➛Approval action","reference":"","reference_display":"Approval action","type":"choice","base_type":"choice","parent_table_name":"chg_approval_def","column_name":"approval_action"},{"name":"1f121adc-67a4-4f86-8e2a-3934b84f44fb.user","label":"2➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1f121adc-67a4-4f86-8e2a-3934b84f44fb.group","label":"2➛Group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.change_request","label":"Input➛Change Request","reference":"change_request","reference_display":"Change Request","type":"reference","base_type":"reference","column_name":""},{"name":"subflow.change_approval_definition","label":"Input➛Change Approval Definition","reference":"chg_approval_def","reference_display":"Change Approval Definition","type":"reference","base_type":"reference","column_name":""},{"name":"72c4597c-38ea-4fee-b82e-ef18a6539fc5.user","label":"10➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"72c4597c-38ea-4fee-b82e-ef18a6539fc5.group","label":"10➛Group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"519fda42-a033-40e2-b708-84200232396b.approval_state","label":"11➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1f121adc-67a4-4f86-8e2a-3934b84f44fb.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1f121adc-67a4-4f86-8e2a-3934b84f44fb.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2432d3f6-ac0d-4b75-91e4-a33d8d48f857.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2432d3f6-ac0d-4b75-91e4-a33d8d48f857.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"31b86e40-8ee6-4365-9f50-9b86aeab46d5.__action_status__","label":"6➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"31b86e40-8ee6-4365-9f50-9b86aeab46d5.__dont_treat_as_error__","label":"6➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ec4689f1-bbda-4b49-8ec8-c7980a4fa5a2.__action_status__","label":"8➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ec4689f1-bbda-4b49-8ec8-c7980a4fa5a2.__dont_treat_as_error__","label":"8➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"72c4597c-38ea-4fee-b82e-ef18a6539fc5.__action_status__","label":"10➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"72c4597c-38ea-4fee-b82e-ef18a6539fc5.__dont_treat_as_error__","label":"10➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"519fda42-a033-40e2-b708-84200232396b.__action_status__","label":"11➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"519fda42-a033-40e2-b708-84200232396b.__dont_treat_as_error__","label":"11➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>536415ca1b1d05105c044119bc4bcbec</master_snapshot>
+        <name>DevOps Apply Change Approval Definition - Tfr</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3d34d98a1b1d05105c044119bc4bcb76</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>DevOps Apply Change Approval Definition - Tfr</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DevOps Data Model" source="sn_devops">34cfa6f087302300f97abba826cb0b54</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name>sys_hub_flow_3d34d98a1b1d05105c044119bc4bcb76</sys_update_name>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:21</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=3d34d98a1b1d05105c044119bc4bcb76"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3d34d98a1b1d05105c044119bc4bcb76"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</claim_owner_scope>
+        <claim_timestamp>1845e2a3d7c0000001</claim_timestamp>
+        <metadata_update_name>sys_hub_flow_3d34d98a1b1d05105c044119bc4bcb76</metadata_update_name>
+        <previous_claim_app_version>1.32.0</previous_claim_app_version>
+        <previous_claim_name>DevOps Data Model</previous_claim_name>
+        <previous_claim_scope>34cfa6f087302300f97abba826cb0b54</previous_claim_scope>
+        <sys_created_by>robert.bryan@crossfuze.com</sys_created_by>
+        <sys_created_on>2022-11-09 20:52:17</sys_created_on>
+        <sys_id>51a217711bc7d1104a75fcc4cc4bcbb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>robert.bryan@crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-11-09 20:52:17</sys_updated_on>
+    </sys_claim>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=3d34d98a1b1d05105c044119bc4bcb76"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=3d34d98a1b1d05105c044119bc4bcb76"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=3d34d98a1b1d05105c044119bc4bcb76^sys_idNOT INbd34d98a1b1d05105c044119bc4bcb77"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>3d34d98a1b1d05105c044119bc4bcb76</id>
+        <name>DevOps Apply Change Approval Definition - Tfr</name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:21</sys_created_on>
+        <sys_id>bd34d98a1b1d05105c044119bc4bcb77</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:21</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=bd34d98a1b1d05105c044119bc4bcb77"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=3d34d98a1b1d05105c044119bc4bcb76^sys_idNOT IN4e34d98a1b1d05105c044119bc4bcb89,8634d98a1b1d05105c044119bc4bcb7e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=1f73e781-d6cb-423f-b6ee-c058776ca9a4</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>chg_approval_def</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>change_approval_definition</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Change Approval Definition</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</model>
+        <model_id>3d34d98a1b1d05105c044119bc4bcb76</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_3d34d98a1b1d05105c044119bc4bcb76</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="chg_approval_def">chg_approval_def</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:21</sys_created_on>
+        <sys_id>4e34d98a1b1d05105c044119bc4bcb89</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=e719bf52-b3f5-482d-8c2c-81c35b0f9851</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>change_request</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>change_request</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Change Request</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</model>
+        <model_id>3d34d98a1b1d05105c044119bc4bcb76</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_3d34d98a1b1d05105c044119bc4bcb76</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="change_request">change_request</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:21</sys_created_on>
+        <sys_id>8634d98a1b1d05105c044119bc4bcb7e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=3d34d98a1b1d05105c044119bc4bcb76"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3d34d98a1b1d05105c044119bc4bcb76"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=3d34d98a1b1d05105c044119bc4bcb76^sys_idNOT IN1234d98a1b1d05105c044119bc4bcbbe,1234d98a1b1d05105c044119bc4bcbc6,2a341d8a1b1d05105c044119bc4bcb16,5e34d98a1b1d05105c044119bc4bcbd4,a6341d8a1b1d05105c044119bc4bcb10,da34d98a1b1d05105c044119bc4bcbcd"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Change Policy User/Group">f51bc43ac7b300108c2c02b827c26003</action_type>
+        <action_type_parent display_value="Get Change Policy User/Group">fd17bbaec77300108c2c02b827c26024</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</flow>
+        <order>2</order>
+        <parent_ui_id>e62dc195-6471-49f2-a35b-c5aa2217d794</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>1234d98a1b1d05105c044119bc4bcbbe</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:20</sys_updated_on>
+        <ui_id>1f121adc-67a4-4f86-8e2a-3934b84f44fb</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1234d98a1b1d05105c044119bc4bcbbe"/>
+    <sys_element_mapping action="delete_multiple" query="id=1234d98a1b1d05105c044119bc4bcbbe"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>change_approval_definition</field>
+        <id>1234d98a1b1d05105c044119bc4bcbbe</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>5634d98a1b1d05105c044119bc4bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f51bc43ac7b300108c2c02b827c26003</table>
+        <value>{{subflow.change_approval_definition}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>change_request</field>
+        <id>1234d98a1b1d05105c044119bc4bcbbe</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>9234d98a1b1d05105c044119bc4bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f51bc43ac7b300108c2c02b827c26003</table>
+        <value>{{subflow.change_request}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1234d98a1b1d05105c044119bc4bcbbe"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1234d98a1b1d05105c044119bc4bcbbe"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="DevOps Create Auto Approval Record">bc2d847ac7b300108c2c02b827c26043</action_type>
+        <action_type_parent display_value="DevOps Create Auto Approval Record">923c8c3ac7b300108c2c02b827c260dd</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</flow>
+        <order>4</order>
+        <parent_ui_id>0f85daeb-3e9f-4395-a48a-1e94af478bfe</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>1234d98a1b1d05105c044119bc4bcbc6</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:20</sys_updated_on>
+        <ui_id>2432d3f6-ac0d-4b75-91e4-a33d8d48f857</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1234d98a1b1d05105c044119bc4bcbc6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1234d98a1b1d05105c044119bc4bcbc6</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>de34d98a1b1d05105c044119bc4bcbc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Approve">f42d847ac7b300108c2c02b827c2605c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=1234d98a1b1d05105c044119bc4bcbc6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approve</field>
+        <id>1234d98a1b1d05105c044119bc4bcbc6</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>9a34d98a1b1d05105c044119bc4bcbc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bc2d847ac7b300108c2c02b827c26043</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>change_request</field>
+        <id>1234d98a1b1d05105c044119bc4bcbc6</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>5e34d98a1b1d05105c044119bc4bcbc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bc2d847ac7b300108c2c02b827c26043</table>
+        <value>{{subflow.change_request}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>user</field>
+        <id>1234d98a1b1d05105c044119bc4bcbc6</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>d634d98a1b1d05105c044119bc4bcbc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bc2d847ac7b300108c2c02b827c26043</table>
+        <value>{{1f121adc-67a4-4f86-8e2a-3934b84f44fb.user}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1234d98a1b1d05105c044119bc4bcbc6"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1234d98a1b1d05105c044119bc4bcbc6"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</flow>
+        <order>11</order>
+        <parent_ui_id>cfbe3c28-71d0-438c-b40f-5ec0507dbbf1</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>2a341d8a1b1d05105c044119bc4bcb16</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:21</sys_updated_on>
+        <ui_id>519fda42-a033-40e2-b708-84200232396b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2a341d8a1b1d05105c044119bc4bcb16"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2a341d8a1b1d05105c044119bc4bcb16</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>22341d8a1b1d05105c044119bc4bcb19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2a341d8a1b1d05105c044119bc4bcb16</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>6a341d8a1b1d05105c044119bc4bcb19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <value>change_request</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2a341d8a1b1d05105c044119bc4bcb16</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>a6341d8a1b1d05105c044119bc4bcb19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2a341d8a1b1d05105c044119bc4bcb16</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>e2341d8a1b1d05105c044119bc4bcb19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Journal Field">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=2a341d8a1b1d05105c044119bc4bcb16"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>2a341d8a1b1d05105c044119bc4bcb16</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>ea341d8a1b1d05105c044119bc4bcb18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyG[{{72c4597c-38ea-4fee-b82e-ef18a6539fc5.group}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>2a341d8a1b1d05105c044119bc4bcb16</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>ee341d8a1b1d05105c044119bc4bcb17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>2a341d8a1b1d05105c044119bc4bcb16</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>2a341d8a1b1d05105c044119bc4bcb18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>2a341d8a1b1d05105c044119bc4bcb16</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>a2341d8a1b1d05105c044119bc4bcb18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>2a341d8a1b1d05105c044119bc4bcb16</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>66341d8a1b1d05105c044119bc4bcb18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{subflow.change_request}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>2a341d8a1b1d05105c044119bc4bcb16</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>ae341d8a1b1d05105c044119bc4bcb18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=2a341d8a1b1d05105c044119bc4bcb16"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2a341d8a1b1d05105c044119bc4bcb16"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</flow>
+        <order>8</order>
+        <parent_ui_id>83ebfb4f-c4b8-4cf4-a775-c2feaf270a71</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>5e34d98a1b1d05105c044119bc4bcbd4</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:21</sys_updated_on>
+        <ui_id>ec4689f1-bbda-4b49-8ec8-c7980a4fa5a2</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5e34d98a1b1d05105c044119bc4bcbd4"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5e34d98a1b1d05105c044119bc4bcbd4</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>22341d8a1b1d05105c044119bc4bcb0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <value>change_request</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5e34d98a1b1d05105c044119bc4bcbd4</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>6e341d8a1b1d05105c044119bc4bcb09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5e34d98a1b1d05105c044119bc4bcbd4</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>aa341d8a1b1d05105c044119bc4bcb09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Journal Field">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5e34d98a1b1d05105c044119bc4bcbd4</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>e6341d8a1b1d05105c044119bc4bcb09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5e34d98a1b1d05105c044119bc4bcbd4"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>5e34d98a1b1d05105c044119bc4bcbd4</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>a2341d8a1b1d05105c044119bc4bcb09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyU[{{1f121adc-67a4-4f86-8e2a-3934b84f44fb.user}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>5e34d98a1b1d05105c044119bc4bcbd4</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>a6341d8a1b1d05105c044119bc4bcb08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>5e34d98a1b1d05105c044119bc4bcbd4</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>ee341d8a1b1d05105c044119bc4bcb08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>5e34d98a1b1d05105c044119bc4bcbd4</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>6a341d8a1b1d05105c044119bc4bcb08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>5e34d98a1b1d05105c044119bc4bcbd4</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>2e341d8a1b1d05105c044119bc4bcb08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{subflow.change_request}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>5e34d98a1b1d05105c044119bc4bcbd4</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>66341d8a1b1d05105c044119bc4bcb09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5e34d98a1b1d05105c044119bc4bcbd4"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5e34d98a1b1d05105c044119bc4bcbd4"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Change Policy User/Group">f51bc43ac7b300108c2c02b827c26003</action_type>
+        <action_type_parent display_value="Get Change Policy User/Group">fd17bbaec77300108c2c02b827c26024</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</flow>
+        <order>10</order>
+        <parent_ui_id>cfbe3c28-71d0-438c-b40f-5ec0507dbbf1</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>a6341d8a1b1d05105c044119bc4bcb10</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:21</sys_updated_on>
+        <ui_id>72c4597c-38ea-4fee-b82e-ef18a6539fc5</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a6341d8a1b1d05105c044119bc4bcb10"/>
+    <sys_element_mapping action="delete_multiple" query="id=a6341d8a1b1d05105c044119bc4bcb10"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>change_approval_definition</field>
+        <id>a6341d8a1b1d05105c044119bc4bcb10</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>2a341d8a1b1d05105c044119bc4bcb11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f51bc43ac7b300108c2c02b827c26003</table>
+        <value>{{subflow.change_approval_definition}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>change_request</field>
+        <id>a6341d8a1b1d05105c044119bc4bcb10</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>66341d8a1b1d05105c044119bc4bcb11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f51bc43ac7b300108c2c02b827c26003</table>
+        <value>{{subflow.change_request}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a6341d8a1b1d05105c044119bc4bcb10"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a6341d8a1b1d05105c044119bc4bcb10"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="DevOps Create Auto Approval Record">bc2d847ac7b300108c2c02b827c26043</action_type>
+        <action_type_parent display_value="DevOps Create Auto Approval Record">923c8c3ac7b300108c2c02b827c260dd</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</flow>
+        <order>6</order>
+        <parent_ui_id>bee329ad-9a2d-4492-b8fb-5ee8d0d273ab</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>da34d98a1b1d05105c044119bc4bcbcd</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:20</sys_updated_on>
+        <ui_id>31b86e40-8ee6-4365-9f50-9b86aeab46d5</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=da34d98a1b1d05105c044119bc4bcbcd"/>
+    <sys_element_mapping action="delete_multiple" query="id=da34d98a1b1d05105c044119bc4bcbcd"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>change_request</field>
+        <id>da34d98a1b1d05105c044119bc4bcbcd</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>de34d98a1b1d05105c044119bc4bcbce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bc2d847ac7b300108c2c02b827c26043</table>
+        <value>{{subflow.change_request}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>user</field>
+        <id>da34d98a1b1d05105c044119bc4bcbcd</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:23</sys_created_on>
+        <sys_id>1e34d98a1b1d05105c044119bc4bcbce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bc2d847ac7b300108c2c02b827c26043</table>
+        <value>{{1f121adc-67a4-4f86-8e2a-3934b84f44fb.user}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=da34d98a1b1d05105c044119bc4bcbcd"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=da34d98a1b1d05105c044119bc4bcbcd"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=3d34d98a1b1d05105c044119bc4bcb76"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=3d34d98a1b1d05105c044119bc4bcb76^sys_idNOT IN1a34d98a1b1d05105c044119bc4bcba5,4234d98a1b1d05105c044119bc4bcba3,4634d98a1b1d05105c044119bc4bcb9f,4e34d98a1b1d05105c044119bc4bcb96,ce34d98a1b1d05105c044119bc4bcb9b"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">5634d98a1b1d05105c044119bc4bcba5</block>
+        <comment/>
+        <connected_to>e62dc195-6471-49f2-a35b-c5aa2217d794</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>1a34d98a1b1d05105c044119bc4bcba5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:21</sys_updated_on>
+        <ui_id>cfbe3c28-71d0-438c-b40f-5ec0507dbbf1</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=1a34d98a1b1d05105c044119bc4bcba5"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=1a34d98a1b1d05105c044119bc4bcba5"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1a34d98a1b1d05105c044119bc4bcba5"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">8e34d98a1b1d05105c044119bc4bcba2</block>
+        <comment/>
+        <connected_to>0f85daeb-3e9f-4395-a48a-1e94af478bfe</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>e62dc195-6471-49f2-a35b-c5aa2217d794</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>4234d98a1b1d05105c044119bc4bcba3</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:21</sys_updated_on>
+        <ui_id>83ebfb4f-c4b8-4cf4-a775-c2feaf270a71</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=4234d98a1b1d05105c044119bc4bcba3"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=4234d98a1b1d05105c044119bc4bcba3"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4234d98a1b1d05105c044119bc4bcba3"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">8234d98a1b1d05105c044119bc4bcb9f</block>
+        <comment/>
+        <connected_to>0f85daeb-3e9f-4395-a48a-1e94af478bfe</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>e62dc195-6471-49f2-a35b-c5aa2217d794</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>4634d98a1b1d05105c044119bc4bcb9f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:20</sys_updated_on>
+        <ui_id>bee329ad-9a2d-4492-b8fb-5ee8d0d273ab</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=4634d98a1b1d05105c044119bc4bcb9f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>4634d98a1b1d05105c044119bc4bcb9f</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>c634d98a1b1d05105c044119bc4bcba2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:22</sys_updated_on>
+        <value>Auto Reject</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4634d98a1b1d05105c044119bc4bcb9f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>4634d98a1b1d05105c044119bc4bcb9f</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>4634d98a1b1d05105c044119bc4bcba2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:22</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{subflow.change_approval_definition.approval_action}}=reject</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>4634d98a1b1d05105c044119bc4bcb9f</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>8234d98a1b1d05105c044119bc4bcba2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:22</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=4634d98a1b1d05105c044119bc4bcb9f"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4634d98a1b1d05105c044119bc4bcb9f"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">4634d98a1b1d05105c044119bc4bcb96</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>4e34d98a1b1d05105c044119bc4bcb96</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:20</sys_updated_on>
+        <ui_id>e62dc195-6471-49f2-a35b-c5aa2217d794</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=4e34d98a1b1d05105c044119bc4bcb96"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>4e34d98a1b1d05105c044119bc4bcb96</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>8e34d98a1b1d05105c044119bc4bcb9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:22</sys_updated_on>
+        <value>User-based Approval</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4e34d98a1b1d05105c044119bc4bcb96"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>4e34d98a1b1d05105c044119bc4bcb96</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>0e34d98a1b1d05105c044119bc4bcb9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:22</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{subflow.change_approval_definition.approval_action}}=approve^NQ{{subflow.change_approval_definition.approval_action}}=reject^NQ{{subflow.change_approval_definition.approval_action}}=user</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>4e34d98a1b1d05105c044119bc4bcb96</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>4634d98a1b1d05105c044119bc4bcb9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:22</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=4e34d98a1b1d05105c044119bc4bcb96"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4e34d98a1b1d05105c044119bc4bcb96"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">0e34d98a1b1d05105c044119bc4bcb9b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>e62dc195-6471-49f2-a35b-c5aa2217d794</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>ce34d98a1b1d05105c044119bc4bcb9b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:20</sys_updated_on>
+        <ui_id>0f85daeb-3e9f-4395-a48a-1e94af478bfe</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=ce34d98a1b1d05105c044119bc4bcb9b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>ce34d98a1b1d05105c044119bc4bcb9b</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>4e34d98a1b1d05105c044119bc4bcb9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:22</sys_updated_on>
+        <value>Auto Approve</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ce34d98a1b1d05105c044119bc4bcb9b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>ce34d98a1b1d05105c044119bc4bcb9b</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>ca34d98a1b1d05105c044119bc4bcb9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:22</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{subflow.change_approval_definition.approval_action}}=approve</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>ce34d98a1b1d05105c044119bc4bcb9b</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>0a34d98a1b1d05105c044119bc4bcb9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:22</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ce34d98a1b1d05105c044119bc4bcb9b"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ce34d98a1b1d05105c044119bc4bcb9b"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=3d34d98a1b1d05105c044119bc4bcb76"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=3d34d98a1b1d05105c044119bc4bcb76"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_3d34d98a1b1d05105c044119bc4bcb76^sys_idNOT IN8234d98a1b1d05105c044119bc4bcb92,8a34d98a1b1d05105c044119bc4bcb88"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>change_approval_definition</element>
+        <help/>
+        <hint/>
+        <label>Change Approval Definition</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3d34d98a1b1d05105c044119bc4bcb76</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:22</sys_created_on>
+        <sys_id>8234d98a1b1d05105c044119bc4bcb92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DevOps Data Model" source="sn_devops">34cfa6f087302300f97abba826cb0b54</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>change_request</element>
+        <help/>
+        <hint/>
+        <label>Change Request</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3d34d98a1b1d05105c044119bc4bcb76</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:17:21</sys_created_on>
+        <sys_id>8a34d98a1b1d05105c044119bc4bcb88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DevOps Data Model" source="sn_devops">34cfa6f087302300f97abba826cb0b54</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:17:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_3d34d98a1b1d05105c044119bc4bcb76"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_3d34d98a1b1d05105c044119bc4bcb76"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_3d34d98a1b1d05105c044119bc4bcb76"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=3d34d98a1b1d05105c044119bc4bcb76"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=3d34d98a1b1d05105c044119bc4bcb76^sys_idNOT INd47495ca1b1d05105c044119bc4bcb3c"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@34e39a</plan>
+        <plan_id display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</plan_id>
+        <snapshot>536415ca1b1d05105c044119bc4bcbec</snapshot>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d47495ca1b1d05105c044119bc4bcb3c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:20</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>devops_apply_change_approval_definition__tfr</internal_name>
+        <label_cache>[{"name":"ec4689f1-bbda-4b49-8ec8-c7980a4fa5a2.approval_state","label":"8➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.change_approval_definition.approval_action","label":"Input➛Change Approval Definition➛Approval action","reference":"","reference_display":"Approval action","type":"choice","base_type":"choice","parent_table_name":"chg_approval_def","column_name":"approval_action"},{"name":"1f121adc-67a4-4f86-8e2a-3934b84f44fb.user","label":"2➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1f121adc-67a4-4f86-8e2a-3934b84f44fb.group","label":"2➛Group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.change_request","label":"Input➛Change Request","reference":"change_request","reference_display":"Change Request","type":"reference","base_type":"reference","column_name":""},{"name":"subflow.change_approval_definition","label":"Input➛Change Approval Definition","reference":"chg_approval_def","reference_display":"Change Approval Definition","type":"reference","base_type":"reference","column_name":""},{"name":"72c4597c-38ea-4fee-b82e-ef18a6539fc5.user","label":"10➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"72c4597c-38ea-4fee-b82e-ef18a6539fc5.group","label":"10➛Group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"519fda42-a033-40e2-b708-84200232396b.approval_state","label":"11➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1f121adc-67a4-4f86-8e2a-3934b84f44fb.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1f121adc-67a4-4f86-8e2a-3934b84f44fb.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2432d3f6-ac0d-4b75-91e4-a33d8d48f857.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2432d3f6-ac0d-4b75-91e4-a33d8d48f857.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"31b86e40-8ee6-4365-9f50-9b86aeab46d5.__action_status__","label":"6➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"31b86e40-8ee6-4365-9f50-9b86aeab46d5.__dont_treat_as_error__","label":"6➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ec4689f1-bbda-4b49-8ec8-c7980a4fa5a2.__action_status__","label":"8➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ec4689f1-bbda-4b49-8ec8-c7980a4fa5a2.__dont_treat_as_error__","label":"8➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"72c4597c-38ea-4fee-b82e-ef18a6539fc5.__action_status__","label":"10➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"72c4597c-38ea-4fee-b82e-ef18a6539fc5.__dont_treat_as_error__","label":"10➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"519fda42-a033-40e2-b708-84200232396b.__action_status__","label":"11➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"519fda42-a033-40e2-b708-84200232396b.__dont_treat_as_error__","label":"11➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>DevOps Apply Change Approval Definition - Tfr</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="DevOps Apply Change Approval Definition - Tfr">3d34d98a1b1d05105c044119bc4bcb76</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>536415ca1b1d05105c044119bc4bcbec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:15</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=536415ca1b1d05105c044119bc4bcbec"/>
+    <sys_variable_value action="delete_multiple" query="document_key=536415ca1b1d05105c044119bc4bcbec"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=536415ca1b1d05105c044119bc4bcbec"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=536415ca1b1d05105c044119bc4bcbec"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=536415ca1b1d05105c044119bc4bcbec^sys_idNOT IN5b6415ca1b1d05105c044119bc4bcbed"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>536415ca1b1d05105c044119bc4bcbec</id>
+        <name>DevOps Apply Change Approval Definition - Tfr</name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:16</sys_created_on>
+        <sys_id>5b6415ca1b1d05105c044119bc4bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:16</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=5b6415ca1b1d05105c044119bc4bcbed"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=536415ca1b1d05105c044119bc4bcbec^sys_idNOT IN176415ca1b1d05105c044119bc4bcbef,5f6455ca1b1d05105c044119bc4bcb56"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=e719bf52-b3f5-482d-8c2c-81c35b0f9851</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>change_request</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>change_request</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Change Request</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="DevOps Apply Change Approval Definition - Tfr">536415ca1b1d05105c044119bc4bcbec</model>
+        <model_id>536415ca1b1d05105c044119bc4bcbec</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_536415ca1b1d05105c044119bc4bcbec</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="change_request">change_request</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:16</sys_created_on>
+        <sys_id>176415ca1b1d05105c044119bc4bcbef</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=1f73e781-d6cb-423f-b6ee-c058776ca9a4</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>chg_approval_def</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>change_approval_definition</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Change Approval Definition</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="DevOps Apply Change Approval Definition - Tfr">536415ca1b1d05105c044119bc4bcbec</model>
+        <model_id>536415ca1b1d05105c044119bc4bcbec</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_536415ca1b1d05105c044119bc4bcbec</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="chg_approval_def">chg_approval_def</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:16</sys_created_on>
+        <sys_id>5f6455ca1b1d05105c044119bc4bcb56</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=536415ca1b1d05105c044119bc4bcbec"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=536415ca1b1d05105c044119bc4bcbec"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=536415ca1b1d05105c044119bc4bcbec^sys_idNOT IN3b6455ca1b1d05105c044119bc4bcbba,736455ca1b1d05105c044119bc4bcbab,a36455ca1b1d05105c044119bc4bcba2,b76455ca1b1d05105c044119bc4bcbb4,e76455ca1b1d05105c044119bc4bcb92,ef6455ca1b1d05105c044119bc4bcb9a"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">536415ca1b1d05105c044119bc4bcbec</flow>
+        <order>11</order>
+        <parent_ui_id>cfbe3c28-71d0-438c-b40f-5ec0507dbbf1</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>3b6455ca1b1d05105c044119bc4bcbba</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <ui_id>519fda42-a033-40e2-b708-84200232396b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=3b6455ca1b1d05105c044119bc4bcbba"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3b6455ca1b1d05105c044119bc4bcbba</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>336455ca1b1d05105c044119bc4bcbbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3b6455ca1b1d05105c044119bc4bcbba</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>7b6455ca1b1d05105c044119bc4bcbbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <value>change_request</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3b6455ca1b1d05105c044119bc4bcbba</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>b76455ca1b1d05105c044119bc4bcbbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3b6455ca1b1d05105c044119bc4bcbba</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>f36455ca1b1d05105c044119bc4bcbbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Journal Field">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=3b6455ca1b1d05105c044119bc4bcbba"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>3b6455ca1b1d05105c044119bc4bcbba</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>fb6455ca1b1d05105c044119bc4bcbbc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyG[{{72c4597c-38ea-4fee-b82e-ef18a6539fc5.group}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>3b6455ca1b1d05105c044119bc4bcbba</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>ff6455ca1b1d05105c044119bc4bcbbb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>3b6455ca1b1d05105c044119bc4bcbba</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>3b6455ca1b1d05105c044119bc4bcbbc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>3b6455ca1b1d05105c044119bc4bcbba</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>b36455ca1b1d05105c044119bc4bcbbc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>3b6455ca1b1d05105c044119bc4bcbba</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>776455ca1b1d05105c044119bc4bcbbc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{subflow.change_request}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>3b6455ca1b1d05105c044119bc4bcbba</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>bf6455ca1b1d05105c044119bc4bcbbc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=3b6455ca1b1d05105c044119bc4bcbba"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3b6455ca1b1d05105c044119bc4bcbba"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">536415ca1b1d05105c044119bc4bcbec</flow>
+        <order>8</order>
+        <parent_ui_id>83ebfb4f-c4b8-4cf4-a775-c2feaf270a71</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>736455ca1b1d05105c044119bc4bcbab</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <ui_id>ec4689f1-bbda-4b49-8ec8-c7980a4fa5a2</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=736455ca1b1d05105c044119bc4bcbab"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>736455ca1b1d05105c044119bc4bcbab</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>3f6455ca1b1d05105c044119bc4bcbad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Journal Field">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>736455ca1b1d05105c044119bc4bcbab</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>7b6455ca1b1d05105c044119bc4bcbad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>736455ca1b1d05105c044119bc4bcbab</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>b36455ca1b1d05105c044119bc4bcbae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <value>change_request</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>736455ca1b1d05105c044119bc4bcbab</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>ff6455ca1b1d05105c044119bc4bcbad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=736455ca1b1d05105c044119bc4bcbab"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>736455ca1b1d05105c044119bc4bcbab</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>376455ca1b1d05105c044119bc4bcbad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyU[{{1f121adc-67a4-4f86-8e2a-3934b84f44fb.user}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>736455ca1b1d05105c044119bc4bcbab</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>3b6455ca1b1d05105c044119bc4bcbac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>736455ca1b1d05105c044119bc4bcbab</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>736455ca1b1d05105c044119bc4bcbad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>736455ca1b1d05105c044119bc4bcbab</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>fb6455ca1b1d05105c044119bc4bcbac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>736455ca1b1d05105c044119bc4bcbab</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>bf6455ca1b1d05105c044119bc4bcbac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{subflow.change_request}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>736455ca1b1d05105c044119bc4bcbab</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>f76455ca1b1d05105c044119bc4bcbad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=736455ca1b1d05105c044119bc4bcbab"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=736455ca1b1d05105c044119bc4bcbab"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="DevOps Create Auto Approval Record">bc2d847ac7b300108c2c02b827c26043</action_type>
+        <action_type_parent display_value="DevOps Create Auto Approval Record">923c8c3ac7b300108c2c02b827c260dd</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">536415ca1b1d05105c044119bc4bcbec</flow>
+        <order>6</order>
+        <parent_ui_id>bee329ad-9a2d-4492-b8fb-5ee8d0d273ab</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>a36455ca1b1d05105c044119bc4bcba2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <ui_id>31b86e40-8ee6-4365-9f50-9b86aeab46d5</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a36455ca1b1d05105c044119bc4bcba2"/>
+    <sys_element_mapping action="delete_multiple" query="id=a36455ca1b1d05105c044119bc4bcba2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>change_request</field>
+        <id>a36455ca1b1d05105c044119bc4bcba2</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>a76455ca1b1d05105c044119bc4bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bc2d847ac7b300108c2c02b827c26043</table>
+        <value>{{subflow.change_request}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>user</field>
+        <id>a36455ca1b1d05105c044119bc4bcba2</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>e36455ca1b1d05105c044119bc4bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bc2d847ac7b300108c2c02b827c26043</table>
+        <value>{{1f121adc-67a4-4f86-8e2a-3934b84f44fb.user}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a36455ca1b1d05105c044119bc4bcba2"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a36455ca1b1d05105c044119bc4bcba2"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Change Policy User/Group">f51bc43ac7b300108c2c02b827c26003</action_type>
+        <action_type_parent display_value="Get Change Policy User/Group">fd17bbaec77300108c2c02b827c26024</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">536415ca1b1d05105c044119bc4bcbec</flow>
+        <order>10</order>
+        <parent_ui_id>cfbe3c28-71d0-438c-b40f-5ec0507dbbf1</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>b76455ca1b1d05105c044119bc4bcbb4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <ui_id>72c4597c-38ea-4fee-b82e-ef18a6539fc5</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b76455ca1b1d05105c044119bc4bcbb4"/>
+    <sys_element_mapping action="delete_multiple" query="id=b76455ca1b1d05105c044119bc4bcbb4"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>change_approval_definition</field>
+        <id>b76455ca1b1d05105c044119bc4bcbb4</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>3b6455ca1b1d05105c044119bc4bcbb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f51bc43ac7b300108c2c02b827c26003</table>
+        <value>{{subflow.change_approval_definition}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>change_request</field>
+        <id>b76455ca1b1d05105c044119bc4bcbb4</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:18</sys_created_on>
+        <sys_id>776455ca1b1d05105c044119bc4bcbb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f51bc43ac7b300108c2c02b827c26003</table>
+        <value>{{subflow.change_request}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b76455ca1b1d05105c044119bc4bcbb4"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b76455ca1b1d05105c044119bc4bcbb4"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Change Policy User/Group">f51bc43ac7b300108c2c02b827c26003</action_type>
+        <action_type_parent display_value="Get Change Policy User/Group">fd17bbaec77300108c2c02b827c26024</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">536415ca1b1d05105c044119bc4bcbec</flow>
+        <order>2</order>
+        <parent_ui_id>e62dc195-6471-49f2-a35b-c5aa2217d794</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>e76455ca1b1d05105c044119bc4bcb92</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <ui_id>1f121adc-67a4-4f86-8e2a-3934b84f44fb</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e76455ca1b1d05105c044119bc4bcb92"/>
+    <sys_element_mapping action="delete_multiple" query="id=e76455ca1b1d05105c044119bc4bcb92"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>change_approval_definition</field>
+        <id>e76455ca1b1d05105c044119bc4bcb92</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>6b6455ca1b1d05105c044119bc4bcb93</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f51bc43ac7b300108c2c02b827c26003</table>
+        <value>{{subflow.change_approval_definition}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>change_request</field>
+        <id>e76455ca1b1d05105c044119bc4bcb92</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>a76455ca1b1d05105c044119bc4bcb93</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f51bc43ac7b300108c2c02b827c26003</table>
+        <value>{{subflow.change_request}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e76455ca1b1d05105c044119bc4bcb92"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e76455ca1b1d05105c044119bc4bcb92"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="DevOps Create Auto Approval Record">bc2d847ac7b300108c2c02b827c26043</action_type>
+        <action_type_parent display_value="DevOps Create Auto Approval Record">923c8c3ac7b300108c2c02b827c260dd</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">536415ca1b1d05105c044119bc4bcbec</flow>
+        <order>4</order>
+        <parent_ui_id>0f85daeb-3e9f-4395-a48a-1e94af478bfe</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>ef6455ca1b1d05105c044119bc4bcb9a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <ui_id>2432d3f6-ac0d-4b75-91e4-a33d8d48f857</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ef6455ca1b1d05105c044119bc4bcb9a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ef6455ca1b1d05105c044119bc4bcb9a</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>2b6455ca1b1d05105c044119bc4bcb9c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Approve">f42d847ac7b300108c2c02b827c2605c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ef6455ca1b1d05105c044119bc4bcb9a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approve</field>
+        <id>ef6455ca1b1d05105c044119bc4bcb9a</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>e36455ca1b1d05105c044119bc4bcb9c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bc2d847ac7b300108c2c02b827c26043</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>change_request</field>
+        <id>ef6455ca1b1d05105c044119bc4bcb9a</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>a76455ca1b1d05105c044119bc4bcb9c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bc2d847ac7b300108c2c02b827c26043</table>
+        <value>{{subflow.change_request}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>user</field>
+        <id>ef6455ca1b1d05105c044119bc4bcb9a</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>236455ca1b1d05105c044119bc4bcb9c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bc2d847ac7b300108c2c02b827c26043</table>
+        <value>{{1f121adc-67a4-4f86-8e2a-3934b84f44fb.user}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ef6455ca1b1d05105c044119bc4bcb9a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ef6455ca1b1d05105c044119bc4bcb9a"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=536415ca1b1d05105c044119bc4bcbec"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=536415ca1b1d05105c044119bc4bcbec^sys_idNOT IN236455ca1b1d05105c044119bc4bcb84,276455ca1b1d05105c044119bc4bcb70,ab6455ca1b1d05105c044119bc4bcb73,ab6455ca1b1d05105c044119bc4bcb86,d36455ca1b1d05105c044119bc4bcb6a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">8e34d98a1b1d05105c044119bc4bcba2</block>
+        <comment/>
+        <connected_to>0f85daeb-3e9f-4395-a48a-1e94af478bfe</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">536415ca1b1d05105c044119bc4bcbec</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>e62dc195-6471-49f2-a35b-c5aa2217d794</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>236455ca1b1d05105c044119bc4bcb84</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <ui_id>83ebfb4f-c4b8-4cf4-a775-c2feaf270a71</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=236455ca1b1d05105c044119bc4bcb84"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=236455ca1b1d05105c044119bc4bcb84"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=236455ca1b1d05105c044119bc4bcb84"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">0e34d98a1b1d05105c044119bc4bcb9b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">536415ca1b1d05105c044119bc4bcbec</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>e62dc195-6471-49f2-a35b-c5aa2217d794</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>276455ca1b1d05105c044119bc4bcb70</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <ui_id>0f85daeb-3e9f-4395-a48a-1e94af478bfe</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=276455ca1b1d05105c044119bc4bcb70"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>276455ca1b1d05105c044119bc4bcb70</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>a36455ca1b1d05105c044119bc4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <value>Auto Approve</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=276455ca1b1d05105c044119bc4bcb70"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>276455ca1b1d05105c044119bc4bcb70</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>236455ca1b1d05105c044119bc4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{subflow.change_approval_definition.approval_action}}=approve</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>276455ca1b1d05105c044119bc4bcb70</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>6f6455ca1b1d05105c044119bc4bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=276455ca1b1d05105c044119bc4bcb70"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=276455ca1b1d05105c044119bc4bcb70"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">8234d98a1b1d05105c044119bc4bcb9f</block>
+        <comment/>
+        <connected_to>0f85daeb-3e9f-4395-a48a-1e94af478bfe</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">536415ca1b1d05105c044119bc4bcbec</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>e62dc195-6471-49f2-a35b-c5aa2217d794</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>ab6455ca1b1d05105c044119bc4bcb73</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <ui_id>bee329ad-9a2d-4492-b8fb-5ee8d0d273ab</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=ab6455ca1b1d05105c044119bc4bcb73"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>ab6455ca1b1d05105c044119bc4bcb73</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>2b6455ca1b1d05105c044119bc4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <value>Auto Reject</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ab6455ca1b1d05105c044119bc4bcb73"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>ab6455ca1b1d05105c044119bc4bcb73</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>a76455ca1b1d05105c044119bc4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{subflow.change_approval_definition.approval_action}}=reject</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>ab6455ca1b1d05105c044119bc4bcb73</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>e36455ca1b1d05105c044119bc4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ab6455ca1b1d05105c044119bc4bcb73"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ab6455ca1b1d05105c044119bc4bcb73"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">5634d98a1b1d05105c044119bc4bcba5</block>
+        <comment/>
+        <connected_to>e62dc195-6471-49f2-a35b-c5aa2217d794</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">536415ca1b1d05105c044119bc4bcbec</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>ab6455ca1b1d05105c044119bc4bcb86</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <ui_id>cfbe3c28-71d0-438c-b40f-5ec0507dbbf1</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=ab6455ca1b1d05105c044119bc4bcb86"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ab6455ca1b1d05105c044119bc4bcb86"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ab6455ca1b1d05105c044119bc4bcb86"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">4634d98a1b1d05105c044119bc4bcb96</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DevOps Apply Change Approval Definition - Tfr">536415ca1b1d05105c044119bc4bcbec</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:16</sys_created_on>
+        <sys_id>d36455ca1b1d05105c044119bc4bcb6a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <ui_id>e62dc195-6471-49f2-a35b-c5aa2217d794</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=d36455ca1b1d05105c044119bc4bcb6a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>d36455ca1b1d05105c044119bc4bcb6a</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>2f6455ca1b1d05105c044119bc4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <value>User-based Approval</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d36455ca1b1d05105c044119bc4bcb6a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>d36455ca1b1d05105c044119bc4bcb6a</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>ab6455ca1b1d05105c044119bc4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{subflow.change_approval_definition.approval_action}}=approve^NQ{{subflow.change_approval_definition.approval_action}}=reject^NQ{{subflow.change_approval_definition.approval_action}}=user</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>d36455ca1b1d05105c044119bc4bcb6a</id>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:17</sys_created_on>
+        <sys_id>e76455ca1b1d05105c044119bc4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:17</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=d36455ca1b1d05105c044119bc4bcb6a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d36455ca1b1d05105c044119bc4bcb6a"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=536415ca1b1d05105c044119bc4bcbec"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=536415ca1b1d05105c044119bc4bcbec"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_536415ca1b1d05105c044119bc4bcbec^sys_idNOT IN136455ca1b1d05105c044119bc4bcb53,576455ca1b1d05105c044119bc4bcb63"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>change_request</element>
+        <help/>
+        <hint/>
+        <label>Change Request</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_536415ca1b1d05105c044119bc4bcbec</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:16</sys_created_on>
+        <sys_id>136455ca1b1d05105c044119bc4bcb53</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DevOps Data Model" source="sn_devops">34cfa6f087302300f97abba826cb0b54</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:16</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>change_approval_definition</element>
+        <help/>
+        <hint/>
+        <label>Change Approval Definition</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_536415ca1b1d05105c044119bc4bcbec</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-28 10:18:16</sys_created_on>
+        <sys_id>576455ca1b1d05105c044119bc4bcb63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DevOps Data Model" source="sn_devops">34cfa6f087302300f97abba826cb0b54</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 10:18:16</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_536415ca1b1d05105c044119bc4bcbec"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_536415ca1b1d05105c044119bc4bcbec"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_536415ca1b1d05105c044119bc4bcbec"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>3d34d98a1b1d05105c044119bc4bcb76</sys_id>
+        <latest_snapshot>536415ca1b1d05105c044119bc4bcbec</latest_snapshot>
+        <compiler_build/>
+    </sys_hub_flow>
+</record_update>

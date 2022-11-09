@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="DevOps App Onboarding">507eb9825b3d3010ac216f643381c76e</catalog_item>
+        <catalog_variable>IO:10c96de45b863010ac216f643381c77d</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>false</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-17 14:37:07</sys_created_on>
+        <sys_id>76eaadd95b463010ac216f643381c77a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>integration_user_password</sys_name>
+        <sys_package display_value="DevOps Data Model" source="sn_devops">34cfa6f087302300f97abba826cb0b54</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_76eaadd95b463010ac216f643381c77a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-09 06:46:05</sys_updated_on>
+        <table/>
+        <ui_policy display_value="hide pipeline  integration username/password if orchestration tool is not selected">16e296de5bbd3010ac216f643381c7f0</ui_policy>
+        <variable>integration_user_password</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</claim_owner_scope>
+        <claim_timestamp>1845e2a3db10000001</claim_timestamp>
+        <metadata_update_name>catalog_ui_policy_action_76eaadd95b463010ac216f643381c77a</metadata_update_name>
+        <previous_claim_app_version>1.32.0</previous_claim_app_version>
+        <previous_claim_name>DevOps Data Model</previous_claim_name>
+        <previous_claim_scope>34cfa6f087302300f97abba826cb0b54</previous_claim_scope>
+        <sys_created_by>robert.bryan@crossfuze.com</sys_created_by>
+        <sys_created_on>2022-11-09 20:52:17</sys_created_on>
+        <sys_id>5da217711bc7d1104a75fcc4cc4bcbbb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>robert.bryan@crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-11-09 20:52:17</sys_updated_on>
+    </sys_claim>
+</record_update>

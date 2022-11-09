@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item">
+    <sc_cat_item action="INSERT_OR_UPDATE">
+        <access_type/>
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category display_value="DevOps">d9868a701bc605105c044119bc4bcb50</category>
+        <checked_out/>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description/>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow display_value="Service Catalog DevOps App Onboarding">9a60ee165bfd3010ac216f643381c755</flow_designer_flow>
+        <fulfillment_automation_level>unspecified</fulfillment_automation_level>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>DevOps App Onboarding</name>
+        <no_attachment_v2>true</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>true</no_cart_v2>
+        <no_delivery_time_v2>true</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>true</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>true</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <owner/>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=507eb9825b3d3010ac216f643381c76e&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <published_ref/>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <request_method>submit</request_method>
+        <roles/>
+        <sc_catalogs>38caa9d1770e3050fcf100ac3e5a994d,e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <sc_template/>
+        <short_description>DevOps App Onboarding</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <state/>
+        <sys_class_name>sc_cat_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-07 13:42:23</sys_created_on>
+        <sys_id>507eb9825b3d3010ac216f643381c76e</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>DevOps App Onboarding</sys_name>
+        <sys_package display_value="DevOps Data Model" source="sn_devops">34cfa6f087302300f97abba826cb0b54</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name>sc_cat_item_507eb9825b3d3010ac216f643381c76e</sys_update_name>
+        <sys_updated_by>robert.bryan@crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-03-02 23:32:53</sys_updated_on>
+        <taxonomy_topic/>
+        <template/>
+        <template_manager_roles/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=507eb9825b3d3010ac216f643381c76e"/>
+    <fx_price action="delete_multiple" query="id=507eb9825b3d3010ac216f643381c76e"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>507eb9825b3d3010ac216f643381c76e</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-07 13:42:23</sys_created_on>
+        <sys_id>498ef9825b3d3010ac216f643381c705</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>robert.bryan@crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-03-02 22:03:22</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="INR">INR</currency>
+        <field>recurring_price</field>
+        <id>507eb9825b3d3010ac216f643381c76e</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-07 13:42:23</sys_created_on>
+        <sys_id>418ef9825b3d3010ac216f643381c707</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>robert.bryan@crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-03-02 22:03:22</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</claim_owner_scope>
+        <claim_timestamp>1845e2a3e060000001</claim_timestamp>
+        <metadata_update_name>sc_cat_item_507eb9825b3d3010ac216f643381c76e</metadata_update_name>
+        <previous_claim_app_version>1.32.0</previous_claim_app_version>
+        <previous_claim_name>DevOps Data Model</previous_claim_name>
+        <previous_claim_scope>34cfa6f087302300f97abba826cb0b54</previous_claim_scope>
+        <sys_created_by>robert.bryan@crossfuze.com</sys_created_by>
+        <sys_created_on>2022-11-09 20:52:17</sys_created_on>
+        <sys_id>a9a217711bc7d1104a75fcc4cc4bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>robert.bryan@crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-11-09 20:52:17</sys_updated_on>
+    </sys_claim>
+</record_update>

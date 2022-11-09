@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_customization">
+    <sys_app_customization action="INSERT_OR_UPDATE">
+        <sys_created_by>robert.bryan@crossfuze.com</sys_created_by>
+        <sys_created_on>2022-11-09 20:52:16</sys_created_on>
+        <sys_id>c5a217711bc7d1104a75fcc4cc4bcbaf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>robert.bryan@crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-11-09 20:52:16</sys_updated_on>
+        <vendor_app display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</vendor_app>
+        <vendor_app_version>1.32.0</vendor_app_version>
+        <version>1.0.0</version>
+        <war_version>glide-sandiego-12-22-2021__patch7-08-17-2022_08-23-2022_1902.zip</war_version>
+    </sys_app_customization>
+</record_update>

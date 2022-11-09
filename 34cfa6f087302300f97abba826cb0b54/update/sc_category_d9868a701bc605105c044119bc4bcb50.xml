@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_category">
+    <sc_category action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <entitlement_script/>
+        <header_icon/>
+        <homepage_image/>
+        <homepage_renderer display_value="Category Items">47ebe8aa3742300054b6a3549dbe5dfa</homepage_renderer>
+        <icon/>
+        <image/>
+        <location/>
+        <mobile_hide_description>false</mobile_hide_description>
+        <mobile_picture/>
+        <mobile_subcategory_render_type>list</mobile_subcategory_render_type>
+        <module/>
+        <order>0</order>
+        <parent/>
+        <roles/>
+        <sc_catalog/>
+        <sys_class_name>sc_category</sys_class_name>
+        <sys_created_by>robert.bryan@crossfuze.com</sys_created_by>
+        <sys_created_on>2022-03-02 23:31:59</sys_created_on>
+        <sys_id>d9868a701bc605105c044119bc4bcb50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevOps</sys_name>
+        <sys_package display_value="DevOps Data Model" source="sn_devops">34cfa6f087302300f97abba826cb0b54</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name>sc_category_d9868a701bc605105c044119bc4bcb50</sys_update_name>
+        <sys_updated_by>robert.bryan@crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-03-02 23:31:59</sys_updated_on>
+        <title>DevOps</title>
+    </sc_category>
+    <sys_translated_text action="delete_multiple" query="documentkey=d9868a701bc605105c044119bc4bcb50"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</claim_owner_scope>
+        <claim_timestamp>1845e2a3dcd0000001</claim_timestamp>
+        <metadata_update_name>sc_category_d9868a701bc605105c044119bc4bcb50</metadata_update_name>
+        <previous_claim_app_version>1.32.0</previous_claim_app_version>
+        <previous_claim_name>DevOps Data Model</previous_claim_name>
+        <previous_claim_scope>34cfa6f087302300f97abba826cb0b54</previous_claim_scope>
+        <sys_created_by>robert.bryan@crossfuze.com</sys_created_by>
+        <sys_created_on>2022-11-09 20:52:17</sys_created_on>
+        <sys_id>d1a217711bc7d1104a75fcc4cc4bcbbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>robert.bryan@crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-11-09 20:52:17</sys_updated_on>
+    </sys_claim>
+</record_update>

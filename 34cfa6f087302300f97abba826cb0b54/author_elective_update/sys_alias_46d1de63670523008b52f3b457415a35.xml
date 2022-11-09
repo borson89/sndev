@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias">
+    <sys_alias action="DELETE">
+        <configuration_template/>
+        <connection_type>http_connection</connection_type>
+        <id>sn_devops.JIRA</id>
+        <multiple_connections>false</multiple_connections>
+        <name>JIRA</name>
+        <parent/>
+        <retry_policy display_value="DevOps Custom HTTP Retry Policy">477ca9d907431010807e1ebf6bd3006d</retry_policy>
+        <sys_class_name>sys_alias</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-15 19:14:56</sys_created_on>
+        <sys_id>46d1de63670523008b52f3b457415a35</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>sn_devops.JIRA</sys_name>
+        <sys_package display_value="DevOps Data Model" source="sn_devops">34cfa6f087302300f97abba826cb0b54</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_update_name>sys_alias_46d1de63670523008b52f3b457415a35</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-03 15:46:02</sys_updated_on>
+        <type>connection</type>
+    </sys_alias>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</application>
+        <file_path/>
+        <instance_id>75fe2b35db65c3c0e1b8f897bf9619eb</instance_id>
+        <instance_name>virtevademo11</instance_name>
+        <name>sys_alias_46d1de63670523008b52f3b457415a35</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias"><sys_alias action="INSERT_OR_UPDATE"><configuration_template/><connection_type>http_connection</connection_type><id>sn_devops.JIRA</id><multiple_connections>false</multiple_connections><name>JIRA</name><parent/><retry_policy display_value="DevOps Custom HTTP Retry Policy">477ca9d907431010807e1ebf6bd3006d</retry_policy><sys_class_name>sys_alias</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2018-10-15 19:14:56</sys_created_on><sys_id>46d1de63670523008b52f3b457415a35</sys_id><sys_mod_count>1</sys_mod_count><sys_name>sn_devops.JIRA</sys_name><sys_package display_value="DevOps Data Model" source="sn_devops">34cfa6f087302300f97abba826cb0b54</sys_package><sys_policy/><sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope><sys_update_name>sys_alias_46d1de63670523008b52f3b457415a35</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-09-03 15:46:02</sys_updated_on><type>connection</type></sys_alias></record_update>]]></payload>
+        <payload_hash>-1451050718</payload_hash>
+        <record_name>sn_devops.JIRA</record_name>
+        <reverted_from/>
+        <source>34cfa6f087302300f97abba826cb0b54</source>
+        <source_table>sys_store_app</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2018-10-15 19:14:56</sys_created_on>
+        <sys_id>78c839471b5589105c044119bc4bcb01</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>166792713800000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Connection &amp; Credential Aliases</type>
+        <update_guid>38c8394769558910305ba9a741d38701</update_guid>
+        <update_guid_history>38c8394769558910305ba9a741d38701:-1451050718</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Chantelle.Daniels@Crossfuze.com</sys_created_by>
+        <sys_created_on>2022-01-31 15:30:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_alias">sys_alias</sys_db_object>
+        <sys_id>450baa88229f4c0cb53a9c1944f43f09</sys_id>
+        <sys_metadata>46d1de63670523008b52f3b457415a35</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_devops.JIRA</sys_name>
+        <sys_package display_value="DevOps Data Model" source="sn_devops">34cfa6f087302300f97abba826cb0b54</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</sys_scope>
+        <sys_scope_delete display_value="">b50a7001b7ca4e9eb8220680b0c41d11</sys_scope_delete>
+        <sys_update_name>sys_alias_46d1de63670523008b52f3b457415a35</sys_update_name>
+        <sys_update_version display_value="sys_alias_46d1de63670523008b52f3b457415a35">78c839471b5589105c044119bc4bcb01</sys_update_version>
+        <sys_updated_by>Chantelle.Daniels@Crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-01-31 15:30:57</sys_updated_on>
+    </sys_metadata_delete>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="DevOps Data Model">34cfa6f087302300f97abba826cb0b54</claim_owner_scope>
+        <claim_timestamp>1845e2a3e0f0000001</claim_timestamp>
+        <metadata_update_name>sys_alias_46d1de63670523008b52f3b457415a35</metadata_update_name>
+        <previous_claim_app_version>1.32.0</previous_claim_app_version>
+        <previous_claim_name>DevOps Data Model</previous_claim_name>
+        <previous_claim_scope>34cfa6f087302300f97abba826cb0b54</previous_claim_scope>
+        <sys_created_by>robert.bryan@crossfuze.com</sys_created_by>
+        <sys_created_on>2022-11-09 20:52:17</sys_created_on>
+        <sys_id>65a217711bc7d1104a75fcc4cc4bcbc1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>robert.bryan@crossfuze.com</sys_updated_by>
+        <sys_updated_on>2022-11-09 20:52:17</sys_updated_on>
+    </sys_claim>
+</record_update>
